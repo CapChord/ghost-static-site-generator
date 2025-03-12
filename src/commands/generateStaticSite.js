@@ -1,7 +1,6 @@
 const path = require('path');
 const mkdirp = require('mkdirp');
 const { argv } = require('yargs');
-const previewGeneratedSite = require('./previewGeneratedSite');
 const fetchUrlHelper = require('../helpers/fetchUrlHelper');
 const copy404PageHelper = require('../helpers/copy404PageHelper');
 const removeQueryStringsHelper = require('../helpers/removeQueryStringsHelper');
@@ -56,25 +55,19 @@ const generateStaticSite = async () => {
      */
     removeQueryStringsHelper(absoluteStaticPath);
 
-    // Replace urls if not in preview mode, otherwise use preview url
-    if (argv.url && !argv.preview) {
-      /**
-       * Replace url in links
-       */
-      replaceUrlHelper(
-        absoluteStaticPath,
-        /\.(html|xml|xsl|txt|js)/,
-        argv.url,
-      );
-    }
+	/**
+     * Replace url in links
+     */
+    replaceUrlHelper(
+      absoluteStaticPath,
+      /\.(html|xml|xsl|txt|js)/,
+      argv.url,
+    );
 
     console.log(`Domain: ${OPTIONS.SOURCE_DOMAIN}`);
     console.log(`Static site generated at: ${absoluteStaticPath}`);
     console.timeEnd('Site generated in');
 
-    if (argv.preview) {
-      previewGeneratedSite(absoluteStaticPath);
-    }
   } catch (error) {
     console.error(error);
 

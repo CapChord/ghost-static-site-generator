@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "http-server ./static -o",
-    "lint": "eslint src",
-    "prepublishOnly": "npm run lint; npm run test;",
-    "release": "release-it",
-    "preview": "http-server ./static"
+    "lint": "eslint src"
   },
   "bin": {
     "gssg": "./src/index.js"
@@ -35,7 +31,6 @@
   },
   "homepage": "https://github.com/Fried-Chicken/ghost-static-site-generator#readme",
   "dependencies": {
-    "http-server": "^13.1.0",
     "lodash": "^4.17.21",
     "mkdirp": "^1.0.4",
     "wget-improved": "^3.4.0",
@@ -57,8 +52,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "jest": "^27.5.1",
-    "release-it": "^14.14.3"
+    "jest": "^27.5.1"
   },
   "resolutions": {
     "boom": "^7.3.0"

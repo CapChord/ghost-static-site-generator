@@ -85,12 +85,6 @@ To change the folder that the static site is generated into using the `--dest` f
 $ node src\index.js --dest "myStaticSiteFolder"
 ```
 
-### Preview site
-This will generated the site and then open the site in a new browser window. Please note: If you want to preview the site then the `--productionDomain` flag is ignored. This is because the links need to replace with the preview server's url.
-```
-$ node src\index.js --preview
-```
-
 ### Replace url
 Use this flag to replace the url, use this option if your site url differs to your ghost url
 ```
