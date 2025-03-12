@@ -1,5 +1,5 @@
 const path = require('path');
-const mkdirp = require('mkdirp');
+const { mkdirp } = require('mkdirp');
 const { argv } = require('yargs');
 const fetchUrlHelper = require('../helpers/fetchUrlHelper');
 const copy404PageHelper = require('../helpers/copy404PageHelper');
