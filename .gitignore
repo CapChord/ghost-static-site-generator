@@ -1,5 +1,13 @@
+# IDE/editor specific
+.idea/*
+.vscode/
+
+# node.js
+npm-debug.log
 node_modules
-static
+
+# macOS
 .DS_Store
-.idea
-coverage
+
+# Output
+build/

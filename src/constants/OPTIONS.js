@@ -16,7 +16,7 @@ const SOURCE_DOMAIN = (argv.sourceDomain || argv.domain || 'http://localhost:236
  */
 const PRODUCTION_DOMAIN = (argv.productionDomain || argv.url || SOURCE_DOMAIN).replace(/\/?$/, '');
 const IGNORE_ABSOLUTE_PATHS = argv.ignoreAbsolutePaths || false;
-const STATIC_DIRECTORY = argv.dest || 'static';
+const STATIC_DIRECTORY = argv.dest || 'build';
 const SAVE_AS_REFERER = argv.saveAsReferer || false;
 
 const shouldShowProgress = () => {
